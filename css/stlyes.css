@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+    --Dark-Blue-300: #0a3871;
+    --background: #f3f5fc;
+    --Text-white: #ffffff;
+}
+* {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: var(--Dark-Blue-300);
+}
+
+html {
+    background: var(--background);
+}
+
+.container {
+    height: 100vh;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.container__section {
+    size: 2rem;
+    flex: 1;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.container__section__fist {
+    padding: 2rem;
+    flex: 2;
+}
+.container__section__second {
+    text-align: center;
+    flex: 1;
+    background: white;
+    border-radius: 1.5em;
+    padding: 1rem 0 1rem 0;
+}
+.section__input {
+    color: var(--Dark-Blue-300);
+    font-size: 2rem;
+    height: -webkit-fill-available;
+    border: none;
+    background: transparent;
+    outline: none;
+    resize: none;
+    font-weight: 300;
+}
+.section__input::placeholder {
+    color: var(--Dark-Blue-300);
+    font-size: 2rem;
+    font-weight: 300;
+}
+.section__input__encriptado {
+    padding: 1em;
+    display: none;
+    font-size: 1.5rem;
+}
+
+.section__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.btn {
+    min-width: 200px;
+    flex: 1;
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    border: 2px solid #0a3871;
+    margin-inline: 1rem;
+}
+.btn_encriptar {
+    color: var(--Text-white);
+    background: var(--Dark-Blue-300);
+}
+.btn_desencriptar {
+}
+
+@media (width<750px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container__section img {
+        display: none;
+    }
+}

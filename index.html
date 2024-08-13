@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>Welcome to ecrypter alura challenge</header>
-    <main>
-      <section>
-        <article>
-          <textarea name="incriptar" id=""></textarea>
-          <button>Encriptar</button>
-        </article>
-        <article>
-          <textarea name="incriptar" id=""></textarea>
-          <button>Desecriptar</button>
-        </article>
-      </section>
-    </main>
-  </body>   
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/stlyes.css" />
+    </head>
+    <body>
+        <header style="position: absolute; margin-top: 1rem">
+            <img src="./assets/Logo.svg" alt="" />
+        </header>
 
-  <style>
-    main {
-      width: 100vh;
-      margin: 0 auto;
-    }
-    section {
-      gap: 0.5rem;
-      display: flex;
-      flex-direction: row;
-      max-width: 800px;
-    }
+        <main class="container">
+            <section class="container__section container__section__fist">
+                <textarea
+                    class="section__input"
+                    id="texto_a_encriptar"
+                    placeholder="Ingrese Texto aquí"
+                ></textarea>
+                <footer class="section__footer">
+                    <button class="btn btn_encriptar" id="btn_encriptar">
+                        Encriptar
+                    </button>
+                    <button id="btn_desencriptar" class="btn btn_desencriptar">
+                        Desecriptar
+                    </button>
+                </footer>
+            </section>
 
-    article {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
+            <section class="container__section container__section__second">
+                <article id="initial_message">
+                    <img
+                        src="./assets/Muñeco.svg"
+                        alt="Muñeco de mensaje no encontrado"
+                    />
+                    <h2>Ningun mensaje fue encontrado</h2>
+                    <br />
+                    <p>Ingresa el texto que deseas encriptar o Desecriptar</p>
+                </article>
+                <textarea
+                    class="section__input section__input__encriptado"
+                    id="texto_encriptado"
+                ></textarea>
+                <footer class="section__footer">
+                    <button id="btn_copiar" class="btn">Copiar</button>
+                </footer>
+            </section>
+        </main>
+        <script src="./js/encriptador.js"></script>
+    </body>
 </html>
